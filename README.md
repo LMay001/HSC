@@ -27,7 +27,7 @@ HSC
 │      HSC.cpp
 │      main.cpp
 │
-│  CMakeLists.txt                            // cmake file
+│  CMakeLists.txt                           // cmake file
 │  README.md
 ```
 
