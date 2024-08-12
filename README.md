@@ -1,8 +1,12 @@
 # HSC
-version 2024-08-11
+code for paper "HSC: a multi-hierarchy descriptor for loop closure detection in overhead occlusion scenes"
+
+version 2024-08-12
 
 ## What is HSC?
 HSC is a new method for loop closure detection in overhead occlusion scenes.
+
+It's based on Scan Context. 
 
 ## Code structure
 ```
@@ -17,6 +21,7 @@ HSC
 │      tictoc.h
 │
 ├─result                                    // folder for result
+│      KITTI05
 │
 ├─src                                       // source code
 │      HSC.cpp
@@ -32,7 +37,21 @@ HSC
 - yaml-cpp
 
 ## How to use?
-**1.Build the code**
+**1.install the code**
+
+```bash
+git clone https://github.com/LMay001/HSC.git
+cd HSC
+```
+
+**2.Modify main.cpp**
+
+```c++
+// Modify it to your path
+std::string config_path = "/home/XXX/HSC/config/parameter.yaml";
+```
+
+**3.Build the code**
 
 ```bash
 mkdir build && cd build
@@ -40,7 +59,7 @@ cmake ..
 make
 ```
 
-**2.Modify the configuration file**
+**4.Modify the configuration file**
 
 ```yaml
 Seq:
@@ -51,14 +70,7 @@ Path:
   Result_Path: "your_path" # Path for result file ("/home/XXX/HSC/result/")
 ```
 
-**3.Modify main.cpp**
-
-```cpp
-// Modify it to your path
-std::string config_path = "/home/XXX/HSC/config/parameter.yaml";
-```
-
-**4.Run the code**
+**5.Run the code**
 
 ```bash
 cd build
@@ -67,7 +79,7 @@ cd build
 
 ## Data
 
-The KITTI dataset can be downloaded at [KITTI](http:// 1099 www.cvlibs.net/datasets/kitti/raw_data.php). The NCLT dataset can be downloaded at [NCLT](http://robots.engin.umich.edu/nclt/). The JLU campus dataset can be downloaded at [JLU](https://www.kaggle.com/datasets/anacondaspyder/self-collected-dataset).
+The KITTI dataset can be downloaded at [KITTI](http://www.cvlibs.net/datasets/kitti/raw_data.php). The NCLT dataset can be downloaded at [NCLT](http://robots.engin.umich.edu/nclt/). The JLU campus dataset can be downloaded at [JLU](https://www.kaggle.com/datasets/anacondaspyder/self-collected-dataset).
 
 ## Paper
 
