@@ -1,0 +1,24 @@
+# parameter settings
+Seq:
+  Sequence: KITTI05
+
+Path:
+  Raw_Path: "/home/jlurobot/data/raw/" # Folder path for point cloud bin files
+  Result_Path: "/home/jlurobot/Loop_final/result/" # Path for result file
+
+Descriptor:
+  LIDAR_HEIGHT: 2 # h_lidar
+  RING_NUM: 20 # ring numbers
+  SECTOR_NUM: 60 # sector numbers
+  MAX_RADIUS: 80 # L_max
+  LEVEL: 4
+  Edge_th: 0.95
+  Use_TimeSeries: true
+  TimeStart_th: 0.3 # 1-w_t
+  TimeEnd_th: 0.4 # 1-w_s'
+
+# KNN相关
+KNN:
+  Ignore_Num_Before_Current: 50
+  Candidate_Num: 10
+  Tree_Rebuild_Period: 50
